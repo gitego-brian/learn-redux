@@ -4,7 +4,7 @@ const initialState = {
   balance: 0,
   isSavings: false,
 };
-export const bankingReducer = (state = initialState, { type, payload }) => {
+const bankingReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case actionTypes.DEPOSIT:
       return {
@@ -35,3 +35,5 @@ export const bankingReducer = (state = initialState, { type, payload }) => {
       return state;
   }
 };
+
+export default bankingReducer;
